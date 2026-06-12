@@ -1,5 +1,5 @@
 ## --Төслийн нэр--
-IndraCyber Institute Official Website
+IndraCyber Institute Website
 
 ## --Төслийн зорилго--
 IndraCyber Institute-ийн сургалтын үйл ажиллагаа, мэргэжлийн хөтөлбөрүүд, ангиудын мэдээлэл, элсэлтийн бүртгэл болон суралцагчдад зориулсан мэдээллийг цахимаар хүргэх веб систем боловсруулах.
@@ -24,32 +24,8 @@ Social Media Marketing
 SEO
 Content Marketing
 
-## 2. Хэрэглэгчийн төрөл
---Visitor (Зочин)
-Вэбсайт үзэх
-Мэргэжлийн мэдээлэл харах
-Багш нарын мэдээлэл харах
-Элсэлтийн мэдээлэл харах
-Холбоо барих мэдээлэл харах
-Онлайн бүртгэл бөглөх\
 
---Student (Суралцагч)
-Нэвтрэх
-Өөрийн мэдээлэл харах
-Хуваарь харах
-Зар мэдээ харах
-
---Admin
-Сургуулийн мэдээлэл удирдах
-Хөтөлбөр нэмэх
-Багш нэмэх
-Мэдээ нийтлэх
-Элсэгчдийн бүртгэл харах
-Хэрэглэгч удирдах
-
-
-
-## 3. Functional Requirements
+## 2. Functional Requirements
 Home Page
 ID	Requirement
 FR-01	Нүүр хуудас байх
@@ -105,7 +81,7 @@ FR-28	Google Map харуулах
 FR-29	Сошиал хаяг харуулах
 
 
-## 4. Non-Functional Requirements
+## 3. Non-Functional Requirements
 --Security
 JWT Authentication
 Password Encryption
@@ -116,48 +92,40 @@ Role Based Authorization
 Availability
 24/7 ажиллагаатай байх
 
-## 5. Database Tables
---users
-id
-fullname
-email
-password
-role
+## 4. Database Tables
+🔐 Role тайлбар (System design)
 
---programs
-id
-program_name
-description
-duration
+👑 superadmin
+Бүх эрхтэй
+Admin үүсгэнэ / устгана
+System settings удирдана
 
---classes
-id
-class_name
-program_id
+🧑‍💼 admin
+Системийн үндсэн удирдлага
+Programs / Teachers / News CRUD
+Admissions хянах
 
---teachers
-id
-fullname
-profession
-image
+🛡 moderator
+Content хянагч
+News approve/edit
+Comments / contacts шалгах
 
---admissions
-id
-fullname
-email
-phone
-selected_program
-status
+👨‍🏫 teacher
+Өөрийн profile
+Class мэдээлэл харах
+Student list харах (өөрийн class)
 
---news
-id
-title
-content
-image
-created_at
+🧑‍💻 staff (ажилтан)
+Admissions data оруулах
+Student бүртгэл хийх
+Internal support
 
---contacts
-id
-fullname
-email
-message
+🎓 student
+Login
+Schedule харах
+News харах
+Profile харах
+
+👤 user (visitor)
+Public access only
+Login хийхгүй байж болно
